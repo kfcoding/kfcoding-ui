@@ -112,13 +112,13 @@ export default {
         // wechat: 'code',
         // tencent: 'code'
       }
-      debugger
       const codeName = hashObj[codeMap[this.$store.state.user.auth_type]]
-      // const codeState = hashObj.state
+      const ustate = hashObj.sate
+      this.$store.commit('SET_STATE', ustate)
       if (!codeName) {
         alert('第三方登录失败')
       } else {
-        this.$store.dispatch('LoginByThirdparty', codeName).then(() => {
+        this.$store.dispatch('LoginByThirdparty', codeName, ustate).then(() => {
           this.$router.push({ path: '/' })
         })
       }

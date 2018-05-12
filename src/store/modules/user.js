@@ -1,11 +1,15 @@
 // import { login, logout, getInfo } from '@/api/login'
-import { login, getInfo } from '@/api/login'
+import { login } from '@/api/login'
 import { getToken, setToken, removeToken } from '@/utils/auth'
-import { githubCallBack } from '@/api/login'
+import { getTokenByCode } from '@/api/login'
+// import { getTokenByCode } from '@/api/github'
+import { getInfo } from '@/api/github'
 
 const user = {
   state: {
-    state: '',
+    id: '',
+    login: '',
+    ustate: '',
     auth_type: '',
     code: '',
     token: getToken(),
@@ -15,8 +19,14 @@ const user = {
   },
 
   mutations: {
+    SET_LOGIN: (state, login) => {
+      state.login = login
+    },
+    SET_ID: (state, id) => {
+      state.id = id
+    },
     SET_STATE: (state, ustate) => {
-      state.state = ustate
+      state.ustate = ustate
     },
     SET_CODE: (state, code) => {
       state.code = code
@@ -59,13 +69,15 @@ const user = {
       return new Promise((resolve, reject) => {
         getInfo(state.token).then(response => {
           const data = response.data
-          if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
-            commit('SET_ROLES', data.roles)
-          } else {
-            reject('getInfo: roles must be a non-null array !')
-          }
+          // if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
+          //   commit('SET_ROLES', data.roles)
+          // } else {
+          //   reject('getInfo: roles must be a non-null array !')
+          // }
           commit('SET_NAME', data.name)
-          commit('SET_AVATAR', data.avatar)
+          commit('SET_AVATAR', data.avatar_url)
+          commit('SET_LOGIN', data.login)
+          commit('SET_ID', data.id)
           resolve(response)
         }).catch(error => {
           reject(error)
@@ -77,10 +89,9 @@ const user = {
     LoginByThirdparty({ commit, state }, code) {
       return new Promise((resolve, reject) => {
         commit('SET_CODE', code)
-        alert('LoginByThirdparty')
-        githubCallBack(state.code).then(response => {
-          commit('SET_TOKEN', response.message)
-          setToken(response.message)
+        getTokenByCode(state.code).then(response => {
+          commit('SET_TOKEN', response.result)
+          setToken(response.result)
           resolve()
         }).catch(error => {
           reject(error)

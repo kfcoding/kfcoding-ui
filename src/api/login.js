@@ -11,6 +11,16 @@ export function login(username, password) {
   })
 }
 
+export function getTokenByCode(code) {
+  return request({
+    url: '/github/getTokenByCode',
+    method: 'get',
+    params: {
+      code
+    }
+  })
+}
+
 export function githubCallBack(code) {
   return request({
     url: '/github/callback',

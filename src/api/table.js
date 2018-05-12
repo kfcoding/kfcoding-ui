@@ -7,3 +7,11 @@ export function getList(params) {
     params
   })
 }
+
+export function getInfo(access_token) {
+  return request({
+    url: '/user',
+    method: 'get',
+    params: { access_token }
+  })
+}

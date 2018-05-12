@@ -27,23 +27,33 @@ export const constantRouterMap = [
   { path: '/404', component: () => import('@/views/404'), hidden: true },
 
   {
-    path: '/',
+    path: '',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: 'dashboard',
     name: 'Dashboard',
-    hidden: true,
-    children: [{
-      path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
-    }]
+    meta: { title: '我的课程', icon: 'dashboard', noCache: true },
+    // hidden: true,
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index'),
+        name: '云课堂',
+        meta: { title: '云课堂', icon: 'table', noCache: true }
+      },
+      {
+        path: 'dashboard?course=2',
+        component: () => import('@/views/dashboard/index'),
+        name: '大数据',
+        meta: { title: '大数据', icon: 'table', noCache: true }
+      }
+    ]
   },
-
   {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    name: '示例',
+    meta: { title: '测试', icon: 'example' },
     children: [
       {
         path: 'table',
