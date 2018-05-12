@@ -19,11 +19,10 @@ export default {
   name: 'social-signin',
   methods: {
     githubHandleClick(thirdpart) {
-      alert('click')
       this.$store.commit('SET_AUTH_TYPE', thirdpart)
       const appid = '1eb243e826a117b3e138'
-      const redirect_uri = encodeURIComponent('http://120.132.94.141:8083/#/authredirect')
-      const url = 'https://github.com/login/oauth/authorize?client_id=' + appid + '&redirect_uri=' + redirect_uri + '&response_type=code&state=' + new Date()
+      // const redirect_uri = encodeURIComponent('http://120.132.94.141:8083/#/authredirect')
+      const url = 'https://github.com/login/oauth/authorize?client_id=' + appid + '&response_type=code&state=' + new Date()
       // window.location.href = url
       openWindow(url, thirdpart, 540, 540)
     },

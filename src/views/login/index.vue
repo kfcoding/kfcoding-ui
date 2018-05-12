@@ -104,7 +104,6 @@ export default {
     // },
     afterQRScan() {
       const hash = window.location.hash.slice(2)
-      alert(hash)
       const hashObj = getQueryObject(hash)
       const originUrl = window.location.origin
       history.replaceState({}, '', originUrl)
@@ -113,6 +112,7 @@ export default {
         // wechat: 'code',
         // tencent: 'code'
       }
+      debugger
       const codeName = hashObj[codeMap[this.$store.state.user.auth_type]]
       // const codeState = hashObj.state
       if (!codeName) {

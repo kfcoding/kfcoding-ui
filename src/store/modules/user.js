@@ -77,8 +77,8 @@ const user = {
     LoginByThirdparty({ commit, state }, code) {
       return new Promise((resolve, reject) => {
         commit('SET_CODE', code)
+        alert('LoginByThirdparty')
         githubCallBack(state.code).then(response => {
-          alert(response.message)
           commit('SET_TOKEN', response.message)
           setToken(response.message)
           resolve()
