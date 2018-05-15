@@ -1,15 +1,6 @@
 <template>
   <div class="dashboard-editor-container">
-    <github-corner></github-corner>
-    <el-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span>卡片名称</span>
-        <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-      </div>
-      <div v-for="o in 4" :key="o" class="text item">
-        {{'列表内容 ' + o }}
-      </div>
-    </el-card>
+    <!--<github-corner></github-corner>-->
     <!--<div class="dashboard-text">姓名:{{name}}</div>-->
     <!--<div class="dashboard-text">帐号:{{login}}</div>-->
     <panel-group></panel-group>
@@ -21,14 +12,12 @@
 import { mapGetters } from 'vuex'
 import GithubCorner from '@/components/GithubCorner'
 import PanelGroup from './components/PanelGroup'
-import { Card } from 'element-ui'
 
 export default {
   name: 'dashboard',
   components: {
     GithubCorner,
-    PanelGroup,
-    Card
+    PanelGroup
   },
   computed: {
     ...mapGetters([
