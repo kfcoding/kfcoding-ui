@@ -10,3 +10,13 @@ export function create(courseName, userId) {
     }
   })
 }
+
+export function findAllByUserId(userId) {
+  return request({
+    url: '/tutorial/findAllByUserId',
+    method: 'get',
+    params: {
+      userId
+    }
+  })
+}

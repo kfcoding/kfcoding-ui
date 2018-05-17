@@ -30,7 +30,6 @@ export const constantRouterMap = [
     path: '',
     component: Layout,
     redirect: 'dashboard',
-    name: 'Dashboard',
     // alwaysShow: false,
     // meta: { title: '我的课程', icon: 'dashboard', noCache: true },
     // hidden: true,

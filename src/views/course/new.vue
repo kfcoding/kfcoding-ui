@@ -11,8 +11,12 @@
                 <div class="main-penal-content-mid-left-content">
                   <el-form class="form-container" :model="postForm" :rules="rules" ref="postForm">
                     <el-form-item style="margin-bottom: 40px;" label-width="45px" label="名称:">
-                      <el-input type="input" :rows="1" autosize placeholder="请输入内容" v-model="postForm.content_short">
+                      <el-input type="input" :rows="1" autosize placeholder="请输入内容" v-model="postForm.content_name">
                       </el-input>
+                    </el-form-item>
+                    <el-form-item style="margin-bottom: 40px;" label-width="45px" label="简介:">
+                    <el-input type="textarea" :rows="3" height="30px" placeholder="请输入内容" v-model="postForm.content_short">
+                    </el-input>
                     </el-form-item>
                   </el-form>
                 </div>
@@ -40,7 +44,9 @@
   import ElButton from 'element-ui/packages/button/src/button'
   import { create } from '@/api/course'
   const defaultForm = {
-    content_short: '' // 名称
+    id: '', //
+    content_name: '', // 名称
+    content_short: '' // 简介
   }
   export default {
     components: {

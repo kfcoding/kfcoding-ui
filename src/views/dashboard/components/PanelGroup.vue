@@ -1,13 +1,13 @@
 <template>
-  <el-row class="panel-group" :gutter="40">
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
+  <el-row  class="panel-group" :gutter="40">
+    <el-col v-for="course of courses" :key="course.id" :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class='card-panel' >
         <div class="card-panel-icon-wrapper icon-message" @click="handleSetLineChartData('newVisitis')">
           <svg-icon icon-class="documentation" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description" @click="handleSetLineChartData('newVisitis')">
-          <div class="card-panel-text">New Visits</div>
-          <div class="card-panel-num">this is url</div>
+          <div class="card-panel-text">{{ course.title }}</div>
+          <div class="card-panel-num">{{ course.brief }}</div>
         </div>
         <div class="card-panel-more">
           <el-popover
@@ -24,6 +24,7 @@
         </div>
       </div>
     </el-col>
+
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="goNew()">
         <div class="card-panel-icon-wrapper icon-people">
@@ -38,15 +39,26 @@
 </template>
 
 <script>
+  import { findAllByUserId } from '@/api/course'
+
   export default {
     data() {
       return {
+        courses: '',
         visible2: false
       }
+    },
+    created() {
+      this.loadCourses()
     },
     components: {
     },
     methods: {
+      loadCourses() {
+        findAllByUserId(this.$store.state.user.id).then(response => {
+          this.courses = response.result.courses
+        })
+      },
       handleSetLineChartData(type) {
         alert('click')
       },
