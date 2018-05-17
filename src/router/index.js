@@ -26,6 +26,7 @@ export const constantRouterMap = [
   { path: '/authredirect', component: () => import('@/views/login/authredirect'), hidden: true },
   { path: '/404', component: () => import('@/views/404'), hidden: true },
   { path: '/new', component: () => import('@/views/course/new'), hidden: true },
+  { path: '/home', component: () => import('@/views/home'), hidden: true },
   {
     path: '',
     component: Layout,
@@ -85,4 +86,3 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
-

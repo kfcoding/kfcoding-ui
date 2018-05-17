@@ -1,107 +1,66 @@
 <template>
-  <div class="login-container">
-    <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
-      <h3 class="title">kfcoding</h3>
-      <el-form-item prop="username">
-        <span class="svg-container svg-container_login">
-          <svg-icon icon-class="user" />
-        </span>
-        <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="username" />
-      </el-form-item>
-      <el-form-item prop="password">
-        <span class="svg-container">
-          <svg-icon icon-class="password"></svg-icon>
-        </span>
-        <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on"
-          placeholder="password"></el-input>
-          <span class="show-pwd" @click="showPwd"><svg-icon icon-class="eye" /></span>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="handleLogin">
-          Sign in
-        </el-button>
-      </el-form-item>
-      <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: admin</span>
+  <div class="login v2">
+    <div class="wrapper">
+      <div class="dialog dialog-shadow" style="display: block; margin-top: -362px;">
+        <div class="title">
+          <h4>请选择登录方式</h4>
+        </div>
+        <div v-if="loginPage" class="content">
+          <ul class="common-form">
+          </ul>
+          <!--Github-->
+          <div style="margin-top: 25px">
+            <y-button text="Github登录"
+                      :classStyle="'main-btn'" @btnClick="githubHandleClick('github')"
+                      style="margin: 0;width: 100%;height: 48px;font-size: 18px;line-height: 48px"></y-button>
+          </div>
+          <!--Weixin-->
+          <div style="margin-top: 25px">
+            <y-button text="微信登录"
+              style="margin: 0;width: 100%;height: 48px;font-size: 18px;line-height: 48px">
+            </y-button>
+          </div>
+          <!--QQ-->
+          <div style="margin-top: 25px">
+            <y-button text="QQ登录"
+              style="margin: 0;width: 100%;height: 48px;font-size: 18px;line-height: 48px">
+            </y-button>
+          </div>
+          <div class="border"></div>
+        </div>
       </div>
-
-      <el-button class="thirdparty-button" type="primary" @click="showDialog=true">第三方登陆</el-button>
-    </el-form>
-
-    <el-dialog :title="thirdparty" :visible.sync="showDialog" append-to-body>
-      测试第三方登陆接口---kfcoding
-      <br/>
-      <br/>
-      <br/>
-      <social-sign />
-    </el-dialog>
+    </div>
   </div>
 </template>
 
 <script>
-import { isvalidUsername } from '@/utils/validate'
 import SocialSign from './socialsignin'
 import { getQueryObject } from '@/utils/index'
-
+import openWindow from '@/utils/openWindow'
+import YButton from './YButton'
 export default {
-  components: { SocialSign },
+  components: { SocialSign, YButton },
   name: 'login',
   data() {
-    const validateUsername = (rule, value, callback) => {
-      if (!isvalidUsername(value)) {
-        callback(new Error('请输入正确的用户名'))
-      } else {
-        callback()
-      }
-    }
-    const validatePass = (rule, value, callback) => {
-      if (value.length < 5) {
-        callback(new Error('密码不能小于5位'))
-      } else {
-        callback()
-      }
-    }
     return {
-      loginForm: {
-        username: 'admin',
-        password: 'admin'
-      },
-      loginRules: {
-        username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-        password: [{ required: true, trigger: 'blur', validator: validatePass }]
-      },
+      loginPage: true,
       loading: false,
-      pwdType: 'password',
       showDialog: false,
       thirdparty: '第三方登陆'
     }
   },
   methods: {
-    showPwd() {
-      if (this.pwdType === 'password') {
-        this.pwdType = ''
-      } else {
-        this.pwdType = 'password'
-      }
+    githubHandleClick(thirdpart) {
+      this.$store.commit('SET_AUTH_TYPE', thirdpart)
+      const appid = '1eb243e826a117b3e138'
+      // const redirect_uri = encodeURIComponent('http://120.132.94.141:8083/#/authredirect')
+      const url = 'https://github.com/login/oauth/authorize?client_id=' + appid + '&response_type=code&state=' + new Date()
+      // window.location.href = url
+      openWindow(url, thirdpart, 540, 540)
     },
-    // handleLogin() {
-    //   this.$refs.loginForm.validate(valid => {
-    //     if (valid) {
-    //       this.loading = true
-    //       this.$store.dispatch('Login', this.loginForm).then(() => {
-    //         this.loading = false
-    //         // this.$router.push({ path: '/' })
-    //         this.showDialog = true
-    //       }).catch(() => {
-    //         this.loading = false
-    //       })
-    //     } else {
-    //       console.log('error submit!!')
-    //       return false
-    //     }
-    //   })
-    // },
+    returnHandleClick() {
+      this.$router.push({ path: '/' })
+    },
     afterQRScan() {
       const hash = window.location.hash.slice(2)
       const hashObj = getQueryObject(hash)
@@ -134,97 +93,188 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss">
-$bg:#2d3a4b;
-$light_gray:#eee;
-
-/* reset element-ui css */
-.login-container {
-  .el-input {
-    display: inline-block;
-    height: 47px;
-    width: 85%;
+* {
+  box-sizing: content-box;
+}
+.login {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .input {
+    height: 50px;
+    display: flex;
+    align-items: center;
     input {
-      background: transparent;
-      border: 0px;
-      -webkit-appearance: none;
-      border-radius: 0px;
-      padding: 12px 5px 12px 15px;
-      color: $light_gray;
-      height: 47px;
-      &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px $bg inset !important;
-        -webkit-text-fill-color: #fff !important;
-      }
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
   }
-  .el-form-item {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    color: #454545;
+  .wrapper {
+    // background: url(/static/images/bg_9b9dcb65ff.png) repeat;
+    background-size: 100px;
+    min-height: 800px;
+    min-width: 630px;
   }
 }
-
-</style>
-
-<style rel="stylesheet/scss" lang="scss" scoped>
-$bg:#2d3a4b;
-$dark_gray:#889aa4;
-$light_gray:#eee;
-.login-container {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: $bg;
-  .login-form {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 520px;
-    padding: 35px 35px 15px 35px;
-    margin: 120px auto;
+.v2 .dialog {
+  width: 450px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -225px;
+  position: absolute;
+  .title {
+    background: linear-gradient(#fff, #f5f5f5);
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    position: relative;
+    // background-image: url(/static/images/smartisan_4ada7fecea.png);
+    background-size: 140px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 92px;
+    margin: 23px 0 50px;
+    padding: 75px 0 0;
+    box-shadow: none;
+    h4 {
+      padding: 0;
+      text-align: center;
+      color: #666;
+      border-bottom: 1px solid #dcdcdc;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      font-weight: 700;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      border-bottom: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      line-height: 1em;
+      height: auto;
+      color: #333;
+      font-weight: 400;
+    }
   }
-  .tips {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 10px;
-    span {
-      &:first-of-type {
-        margin-right: 16px;
+  .content {
+    padding: 0 40px 22px;
+    height: auto;
+    .common-form {
+      li {
+        clear: both;
+        margin-bottom: 15px;
+        position: relative;
       }
     }
   }
-  .svg-container {
-    padding: 6px 5px 6px 15px;
-    color: $dark_gray;
-    vertical-align: middle;
-    width: 30px;
-    display: inline-block;
-    &_login {
-      font-size: 20px;
-    }
+}
+.dialog-shadow,
+.v2 .bbs .dialog-shadow,
+.v2 .dialog-shadow {
+  -webkit-box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2),
+    0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04),
+    0 10px 20px -10px rgba(0, 0, 0, 0.04);
+}
+@media screen and (min-width: 737px),
+  screen and (-webkit-max-device-pixel-ratio: 1.9) and (max-width: 736px) and (min-device-width: 737px) {
+  .wrapper {
+    // background: url(/static/images/con-bg_04f25dbf8e.jpg) repeat-x;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
-  .title {
-    font-size: 26px;
-    font-weight: 400;
-    color: $light_gray;
-    margin: 0px auto 40px auto;
+  .dialog {
+    // background: url(/static/images/dialog-gray-bg.png) #fff bottom repeat-x;
+    border-radius: 12px;
+    display: none;
+    margin: -163px 0 0 -218px;
+    width: 436px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+  }
+  .dialog .title h4 {
+    border-bottom: #d1d1d1 solid 1px;
+    box-shadow: 0 2px 6px #d1d1d1;
+    color: #666;
+    font-size: 20px;
+    height: 61px;
+    line-height: 61px;
+    padding: 0 0 0 35px;
+  }
+  .common-form li {
+    clear: both;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .auto-login {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: #999;
+  }
+  .register {
+    padding: 1px 10px 0;
+    border-right: 1px solid #ccc;
+  }
+  .border {
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .other {
+    margin: 20px 5px 0 0;
+    width: auto;
+    color: #bbb;
+    font-size: 12px;
+    cursor: default;
+    color: #999;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .agree {
+    margin-bottom: 30px;
+    color: #999;
+  }
+}
+.registered {
+  h4 {
+    padding: 0;
     text-align: center;
-    font-weight: bold;
+    color: #666;
+    border-bottom: 1px solid #dcdcdc;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-weight: 700;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
   }
-  .show-pwd {
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    font-size: 16px;
-    color: $dark_gray;
-    cursor: pointer;
-    user-select: none;
-  }
-  .thirdparty-button {
-    position: absolute;
-    right: 35px;
-    bottom: 28px;
-  }
+}
+#wait {
+  text-align: left;
+  color: #999;
+  margin: 0;
 }
 </style>
