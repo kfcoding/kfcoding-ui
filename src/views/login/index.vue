@@ -16,13 +16,13 @@
           </div>
           <!--Weixin-->
           <div style="margin-top: 25px">
-            <y-button text="微信登录"
+            <y-button text="微信登录(待开放)"
               style="margin: 0;width: 100%;height: 48px;font-size: 18px;line-height: 48px">
             </y-button>
           </div>
           <!--QQ-->
           <div style="margin-top: 25px">
-            <y-button text="QQ登录"
+            <y-button text="QQ登录(待开放)"
               style="margin: 0;width: 100%;height: 48px;font-size: 18px;line-height: 48px">
             </y-button>
           </div>
@@ -114,7 +114,7 @@ export default {
     }
   }
   .wrapper {
-    // background: url(/static/images/bg_9b9dcb65ff.png) repeat;
+    // background: url(/static/images/kfcoding-logo-head-little.png) repeat;
     background-size: 100px;
     min-height: 800px;
     min-width: 630px;
@@ -134,11 +134,11 @@ export default {
     overflow: visible;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     position: relative;
-    // background-image: url(/static/images/smartisan_4ada7fecea.png);
-    background-size: 140px;
+    background-image: url(/static/img/kfcoding-logo-gray.jpg);
+    background-size: 400px;
     background-position: top center;
     background-repeat: no-repeat;
-    height: 92px;
+    height: 222px;
     margin: 23px 0 50px;
     padding: 75px 0 0;
     box-shadow: none;
