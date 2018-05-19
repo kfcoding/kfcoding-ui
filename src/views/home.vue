@@ -11,17 +11,15 @@
     <link rel="stylesheet" href="static/css/responsive.css">
     <link rel="stylesheet" href="static/css/colors/theme-color-1.css">
     <link rel="stylesheet" href="static/css/custom.css">
-    <!-- <div class="preLoader"> <span class="spin"></span> -->
-    <!-- </div> -->
+    <div class="preLoader"> <span class="spin"></span>
+    </div>
     <header class="main-header bg-secondary">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-2 col-md-3 col-sm-5 col-9">
                     <div class="logo" data-animate="fadeInDown" data-delay=".5">
-                        <a href="index.html">
-                            <img data-rjs="3" src="static/img/logo-white.png" alt="Crypto Cloud">
-                            <img data-rjs="3" src="static/img/logo-blue.png" alt="Crypto Cloud">
-                        </a>
+                        <a href="index.html"><img data-rjs="3" src="static/img/kfcoding-logo-head-little.png" alt="Crypto Cloud"></a>
+                        <a href="index.html"><img data-rjs="3" src="static/img/kfcoding-logo-words.png" alt="Crypto Cloud"></a>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-8 col-md-6 col-sm-3 col-3">
@@ -42,13 +40,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-4">
                     <div class="banner-image text-center" data-animate="fadeInUp" data-delay="1.2">
-                        <img data-rjs="3" src="static/img/katacoda-course-outline.jpg" alt="">
+                        <img data-rjs="3" src="static/img/kfcoding-logo-blue.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-8">
                     <div class="banner-content text-white">
                         <h2 data-animate="fadeInUp" data-delay="1.4">新一代交互式IT学习与培训平台</h2>
+                        <!-- <h2 data-animate="fadeInUp" data-delay="1.4">KFCoding</h2> -->
                         <p data-animate="fadeInUp" data-delay="1.5">在浏览器中学习各种编程技术、开源工具</p>
+
                         <ul class="list-inline" data-animate="fadeInUp" data-delay="1.6">
                             <li><a class="btn btn-transparent" href="/#/login">Github 登录</a>
                             </li>
@@ -272,11 +272,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="why-us-video text-center text-white position-relative" data-animate="fadeInUp" data-delay=".1">
-                        <img data-rjs="3" src="static/img/video-bg.jpg" alt="">
+                        <img data-rjs="3" src="static/img/kfcoding-logo-gray.jpg" alt="">
                         <p>
                             <a class="youtube-popup" href="static/img/kfpanda.mp4">
                                 <img data-rjs="3" src="static/img/play.png" alt="">
-                            </a> <span>You Will Buy After Watching</span>
+                            </a> <span>Watching the vedio</span>
                         </p>
                     </div>
                 </div>
@@ -289,10 +289,10 @@
     <footer >
         <div class="bottom-footer position-relative">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row justify-content-center">
                     <div class="col-md-5 order-last order-md-first"> <span class="copyright-text" data-animate="fadeInDown" data-delay=".7">Copyright &copy; 2018 <a href="index.html#">KFCoding</a>. All Rights Reserved.</span>
                     </div>
-                    <div class="col-md-7 order-first order-md-last">
+                    <!-- <div class="col-md-7 order-first order-md-last">
                         <ul class="footer-menu text-md-right list-inline">
                             <li data-animate="fadeInDown" data-delay=".75"><a href="index.html#">About</a>
                             </li>
@@ -303,7 +303,7 @@
                             <li data-animate="fadeInDown" data-delay=".9"><a href="index.html#">Termns & Conditions</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
