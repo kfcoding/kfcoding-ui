@@ -1,6 +1,5 @@
 <template>
   <div>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400%7CPoppins:400,400i,500,700">
     <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/plugins/swiper/swiper.min.css">
@@ -11,8 +10,8 @@
     <link rel="stylesheet" href="static/css/responsive.css">
     <link rel="stylesheet" href="static/css/colors/theme-color-1.css">
     <link rel="stylesheet" href="static/css/custom.css">
-    <div class="preLoader"> <span class="spin"></span>
-    </div>
+    <!-- <div class="preLoader"> <span class="spin"></span>
+    </div> -->
     <header class="main-header bg-secondary">
         <div class="container">
             <div class="row">
@@ -29,7 +28,7 @@
                     </nav>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 d-none d-sm-block">
-                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="/#/login"><i class="fas fa-key"></i>登录</a>
+                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="/login"><i class="fas fa-key"></i>登录</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +49,7 @@
                         <p data-animate="fadeInUp" data-delay="1.5">在浏览器中学习各种编程技术、开源工具</p>
 
                         <ul class="list-inline" data-animate="fadeInUp" data-delay="1.6">
-                            <li><a class="btn btn-transparent" href="/#/login">Github 登录</a>
+                            <li><a class="btn btn-transparent" href="/login">Github 登录</a>
                             </li>
                         </ul>
                     </div>
@@ -240,35 +239,35 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="section-title text-left">
-                        <h2 data-animate="fadeInUp" data-delay=".1">Why Choose Us</h2>
-                        <p data-animate="fadeInUp" data-delay=".2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 data-animate="fadeInUp" data-delay=".1">我们的优势</h2>
+                        <p data-animate="fadeInUp" data-delay=".2">KFCoding是一个在线计算机技术手册、教程和文档制作和学习系统，我们致力于帮助计算机技术更好地传播，并形成世界上最大的计算机实训教程数据库。</p>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".3">
-                                <h3>01. High Performance</h3>
+                                <h3>所见即所得内容制作</h3>
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".4">
-                                <h3>02. Enhance Security</h3>
+                                <h3>内嵌代码一键执行</h3>
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".5">
-                                <h3>03. Spam Guard</h3>
+                                <h3>支持Matlab等大型GUI计算软件</h3>
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".6">
-                                <h3>04. Unbeatable Support</h3>
+                                <h3>支持虚拟分布式环境</h3>
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
-                    </div> <a href="index.html#" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">Purchase Now</a>
+                    </div> <a href="/login" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="why-us-video text-center text-white position-relative" data-animate="fadeInUp" data-delay=".1">
@@ -292,18 +291,6 @@
                 <div class="row justify-content-center">
                     <div class="col-md-5 order-last order-md-first"> <span class="copyright-text" data-animate="fadeInDown" data-delay=".7">Copyright &copy; 2018 <a href="index.html#">KFCoding</a>. All Rights Reserved.</span>
                     </div>
-                    <!-- <div class="col-md-7 order-first order-md-last">
-                        <ul class="footer-menu text-md-right list-inline">
-                            <li data-animate="fadeInDown" data-delay=".75"><a href="index.html#">About</a>
-                            </li>
-                            <li data-animate="fadeInDown" data-delay=".8"><a href="index.html#">Afilliate</a>
-                            </li>
-                            <li data-animate="fadeInDown" data-delay=".85"><a href="index.html#">Privacy Policy</a>
-                            </li>
-                            <li data-animate="fadeInDown" data-delay=".9"><a href="index.html#">Termns & Conditions</a>
-                            </li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -319,7 +306,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
