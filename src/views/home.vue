@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="static/css/responsive.css">
     <link rel="stylesheet" href="static/css/colors/theme-color-1.css">
     <link rel="stylesheet" href="static/css/custom.css">
-    <!-- <div class="preLoader"> <span class="spin"></span>
-    </div> -->
     <header class="main-header bg-secondary">
         <div class="container">
             <div class="row">
@@ -28,7 +26,7 @@
                     </nav>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 d-none d-sm-block">
-                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="/login"><i class="fas fa-key"></i>登录</a>
+                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="/signin"><i class="fas fa-key"></i>登录</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +47,7 @@
                         <p data-animate="fadeInUp" data-delay="1.5">在浏览器中学习各种编程技术、开源工具</p>
 
                         <ul class="list-inline" data-animate="fadeInUp" data-delay="1.6">
-                            <li><a class="btn btn-transparent" href="/login">Github 登录</a>
+                            <li><a class="btn btn-transparent" href="/signin">Github 登录</a>
                             </li>
                         </ul>
                     </div>
@@ -97,7 +95,7 @@
                 <div class="col-xl-6 col-lg-8">
                     <div class="section-title text-center">
                         <h2 data-animate="fadeInUp" data-delay=".1">我们的课程</h2>
-                        <p data-animate="fadeInUp" data-delay=".2">Over 100 interactive scenarios helping you solve real problems and learn new skills.</p>
+                        <p data-animate="fadeInUp" data-delay=".2">超过100小节的交互式课程，帮助你快速学习新技术并解决实际问题</p>
                     </div>
                 </div>
             </div>
@@ -113,13 +111,13 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">SCENARIOS</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Popular Sale</span>
+                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>云计算原理与实践</h3>
                         <p>Get started using Kubernetes</p>
                         <ul class="karla list-unstyled text-left">
@@ -129,8 +127,8 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">SCENARIOS</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
@@ -145,13 +143,13 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">SCENARIOS</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Popular Sale</span>
+                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>大数据原理与实践</h3>
                         <p>Get started using Kubernetes</p>
                         <ul class="karla list-unstyled text-left">
@@ -161,8 +159,8 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">SCENARIOS</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
@@ -178,13 +176,13 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">SCENARIOS</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Popular Sale</span>
+                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>Kubernetes Introduction</h3>
                         <p>Get started using Kubernetes</p>
                         <ul class="karla list-unstyled text-left">
@@ -194,8 +192,8 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">SCENARIOS</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
@@ -210,13 +208,13 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">SCENARIOS</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Popular Sale</span>
+                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>Kubernetes Introduction</h3>
                         <p>Get started using Kubernetes</p>
                         <ul class="karla list-unstyled text-left">
@@ -226,8 +224,8 @@
                             <li>Transfer 1 TB</li>
                             <li>Network In 40 Gbps</li>
                             <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">SCENARIOS</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">Start Course</a>
+                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +265,7 @@
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
-                    </div> <a href="/login" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
+                    </div> <a href="/signin" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="why-us-video text-center text-white position-relative" data-animate="fadeInUp" data-delay=".1">
