@@ -26,7 +26,7 @@
                     </nav>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 d-none d-sm-block">
-                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="http://kfcoding.com"><i class="fas fa-key"></i>登录</a>
+                    <div class="register-button" data-animate="fadeInDown" data-delay="1"> <a class="btn btn-transparent btn-block" href="http://kfcoding.com/signin"><i class="fas fa-key"></i>登录</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                         <p data-animate="fadeInUp" data-delay="1.5">在浏览器中学习各种编程技术、开源工具</p>
 
                         <ul class="list-inline" data-animate="fadeInUp" data-delay="1.6">
-                            <li><a class="btn btn-transparent" href="http://kfcoding.com">Github 登录</a>
+                            <li><a class="btn btn-transparent" href="http://kfcoding.com/signin">Github 登录</a>
                             </li>
                         </ul>
                     </div>
@@ -265,7 +265,7 @@
                                 <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
                             </div>
                         </div>
-                    </div> <a href="http://kfcoding.com" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
+                    </div> <a href="http://kfcoding.com/signin" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="why-us-video text-center text-white position-relative" data-animate="fadeInUp" data-delay=".1">
