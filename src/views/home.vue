@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div>
     <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
@@ -69,21 +69,21 @@
                     <div class="single-home-feature" data-animate="fadeInUp" data-delay=".3">
                         <img class="svg" src="static/img/security.svg" alt="">
                         <h3>快速、独享</h3>
-                        <p>只需打开浏览器，几秒钟内即可创建新的实验环境，可在实验环境中下载自己的工程文件；各种实训环境触手可及、 随时可用、 秒级启动、 用完即走</p>
+                        <p>只需打开浏览器，几秒钟内即可创建新的实验环境，可在实验环境中下载自己的工程文件；各种实训环境触手可及、 随时可用、 秒级启动、 用完即走。 </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-home-feature" data-animate="fadeInUp" data-delay=".5">
                         <img class="svg" src="static/img/guard.svg" alt="">
                         <h3>灵活、方便</h3>
-                        <p>只要有互联网，就可以随时随地访问自己的实训环境，走到哪里都能继续完成实训任务，做到全天候随时随地访问实训环境的效果。</p>
+                        <p>只要有互联网，就可以随时随地访问自己的实训环境，走到哪里都能继续完成实训任务,做到全天候随时随地访问实训环境的效果。</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-home-feature" data-animate="fadeInUp" data-delay=".7">
                         <img class="svg" src="static/img/support.svg" alt="">
                         <h3>黑客、达人的迅速养成</h3>
-                        <p>通过学习与实训，迅速达到较高的编程水平和计算机科学认知水平，让你产生对计算机和开源技术炽的热追求。</p>
+                        <p>通过学习与实训，迅速达到较高的编程水平和计算机科学认知水平，让你产生对计算机和开源技术的炽热追求。</p>
                     </div>
                 </div>
             </div>
@@ -103,15 +103,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".1">
                         <h3>Git入门</h3>
-                        <p>Learn how to deploy</p>
+                        <p>史上最浅显易懂的Git教程！</p>
                         <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                            <li>➊ 学习目前世界上最先进的分布式版本控制系统</li>
+                            <li>➋ 面向初学者，没有接触过版本控制概念的读者也可以轻松入门</li>
+                            <li>➌ 实用性超强，边学边练</li>
+                        </ul> <span class="text-left"><sup></sup>12<sub class="karla">小节</sub></span>
                         <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
@@ -119,15 +116,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>云计算原理与实践</h3>
-                        <p>Get started using Kubernetes</p>
+                        <p>掌握云计算的核心技术</p>
                         <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                            <li>➊ 全面、系统地介绍了云计算的基本概念、原理和技术</li>
+                            <li>➋ 结合产业实践介绍云计算的新发展和相关的工程问题</li>
+                            <li>➌ 云上架构设计的最佳实践</li>
+                          </ul> <span class="text-left"><sup></sup>17<sub class="karla">小节</sub></span>
                           <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
@@ -135,15 +129,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".1">
                         <h3>数据科学通识导论</h3>
-                        <p>Learn how to deploy</p>
+                        <p>向数据科学寻根究底、理清源流</p>
                         <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
+                            <li>➊ 建立数据思维方式，学习怎样利用数据</li>
+                            <li>➋ 了解数据清理、集成、探索等相关技术</li>
+                            <li>➌ 洞见和商业意识</li>
+                        </ul> <span class="text-left"><sup></sup>22<sub class="karla">小节</sub></span>
                         <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
@@ -151,80 +142,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
                         <h3>大数据原理与实践</h3>
-                        <p>Get started using Kubernetes</p>
+                        <p>大数据相关原理、技术和实践案例</p>
                         <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".1">
-                        <h3>Docker & Containers</h3>
-                        <p>Learn how to deploy</p>
-                        <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
-                        <h3>Kubernetes Introduction</h3>
-                        <p>Get started using Kubernetes</p>
-                        <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
-                          <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".1">
-                        <h3>Docker & Containers</h3>
-                        <p>Learn how to deploy</p>
-                        <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                        </ul> <span class="text-left"><sup>$</sup>22<sub class="karla">小节</sub></span>
-                        <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-pricing-plan text-center" data-animate="fadeInUp" data-delay=".3"> <span class="popular">Hot</span>
-                        <h3>Kubernetes Introduction</h3>
-                        <p>Get started using Kubernetes</p>
-                        <ul class="karla list-unstyled text-left">
-                            <li>RAM 1 GB</li>
-                            <li>Core CPU 1</li>
-                            <li>SSD Storage 20 GB</li>
-                            <li>Transfer 1 TB</li>
-                            <li>Network In 40 Gbps</li>
-                            <li>Network Out 1000 Mbps</li>
-                          </ul> <span class="text-left"><sup>$</sup>17<sub class="karla">小节</sub></span>
+                            <li>➊ 了解大数据的基本概念、技术架构和大数据的应用场景</li>
+                            <li>➋ 了解感知与采集、大数据存储、大数据管理等技术</li>
+                            <li>➌ 开展大数据创新实践</li>
+                        </ul> <span class="text-left"><sup></sup>18<sub class="karla">小节</sub></span>
                           <div class="purchase bg-dark bg-rotate position-relative"> <a href="index.html#" class="btn btn-transparent">开始学习</a>
                         </div>
                     </div>
@@ -244,25 +167,25 @@
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".3">
                                 <h3>所见即所得内容制作</h3>
-                                <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
+                                <p>支持Markdown，教程编写“所见即所得”，书写与阅读体验的极致体验。</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".4">
                                 <h3>内嵌代码一键执行</h3>
-                                <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
+                                <p>只需轻轻一点，教程中的代码块即可一键执行，超酷！</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".5">
                                 <h3>支持Matlab等大型GUI计算软件</h3>
-                                <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
+                                <p>秒级启动完全功能的Matlab等大型GUI计算软件</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-reason" data-animate="fadeInUp" data-delay=".6">
                                 <h3>支持虚拟分布式环境</h3>
-                                <p>Sed ut perspiciatis unde omnis isterror sit accusantium</p>
+                                <p>灵活、弹性的虚拟分布式环境</p>
                             </div>
                         </div>
                     </div> <a href="http://kfcoding.com/signin" class="btn btn-primary" data-animate="fadeInUp" data-delay=".7">登录</a>
@@ -280,14 +203,14 @@
             </div>
         </div>
     </section>
-    <section class="bg-light bg-rotate position-relative">
+    <!-- <section class="bg-light bg-rotate position-relative">
     <swiper></swiper>
-    </section>
+    </section> -->
     <footer >
         <div class="bottom-footer position-relative">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-5 order-last order-md-first"> <span class="copyright-text" data-animate="fadeInDown" data-delay=".7">       Copyright &copy; 2018 <a href="index.html#">KFCoding</a>. All Rights Reserved.</span>
+                    <div class="col-md-5 order-last order-md-first"> <span class="copyright-text" data-animate="fadeInDown" data-delay=".7">        Copyright &copy; 2018 <a href="index.html#">KFCoding</a>. All Rights Reserved.</span>
                     </div>
                 </div>
             </div>
